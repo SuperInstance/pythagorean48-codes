@@ -1,0 +1,10 @@
+[package]
+name = "pythagorean48-codes"
+version = "0.1.0"
+edition = "2021"
+description = "48 exact Pythagorean direction vectors for trust encoding. Shared codebook for SuperInstance fleet."
+repository = "https://github.com/SuperInstance/pythagorean48-codes"
+license = "MIT"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
