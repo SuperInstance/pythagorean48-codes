@@ -1,5 +1,15 @@
 # pythagorean48-codes
 
+
+## Meta
+
+**Domain:** other
+**Depends on:** —
+**Depended by:** —
+**Implements:** Pythagorean-48 directional encoding — 48 compass points as exact integer pairs (...
+**Related:** —
+
+
 **Forty-eight exact directions. Zero drift, unlimited hops.**
 
 A 48-direction compass rose where every vector lands exactly on the unit circle. No floating-point encoding. No error accumulation. Each direction is represented as a Pythagorean triple `(x, y)` where `x² + y² = 1` exactly — integer numerators over matching denominators.
