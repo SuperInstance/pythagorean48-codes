@@ -84,7 +84,18 @@ mod tests {
     }
     #[test] fn test_encode_decode() {
         let (x, y) = (0.6_f32, 0.8_f32);
-        let (dx, dy) = TrustVector::from_f32(x, y).to_f32();
+        let (dx, _dy) = TrustVector::from_f32(x, y).to_f32();
         assert!((dx - x).abs() < 0.02);
+    }
+
+    #[test]
+    fn test_all_directions_unique() {
+        let dirs = TrustVector::all_directions();
+        assert_eq!(dirs.len(), 48, "COUNT must be 48");
+        let mut seen = std::collections::HashSet::new();
+        for (i, &(xn, xd, yn, yd)) in dirs.iter().enumerate() {
+            let key = (xn, xd, yn, yd);
+            assert!(seen.insert(key), "Direction {} is duplicate of an earlier direction", i);
+        }
     }
 }
