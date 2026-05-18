@@ -1,6 +1,8 @@
 # pythagorean48-codes
 
 
+![CI](https://github.com/SuperInstance/pythagorean48-codes/actions/workflows/rust-ci.yml/badge.svg)
+
 ## Meta
 
 **Domain:** other
